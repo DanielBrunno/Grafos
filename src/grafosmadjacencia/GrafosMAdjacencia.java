@@ -18,6 +18,12 @@ public class GrafosMAdjacencia {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Grafo grafo = new Grafo(5);        
+        grafo.listaVazia(0);
+        grafo.inserirAresta(0, 0, 1);
+        grafo.inserirAresta(1, 0, 1);
+        grafo.imprimir();
     }
     
 }
