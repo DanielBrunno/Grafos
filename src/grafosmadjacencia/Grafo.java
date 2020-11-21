@@ -38,5 +38,9 @@ public class Grafo {
     }
     public boolean existeLigacao(int v1, int v2){ return this.matriz[v1][v1] > 0; }
     
+    public Aresta primeiroDaLista(int v){ 
+    this.posicaoAtual[v] = -1;
+    return this.proximoLista(v);
+    }
     
 }
