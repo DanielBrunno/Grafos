@@ -42,5 +42,13 @@ public class Grafo {
     this.posicaoAtual[v] = -1;
     return this.proximoLista(v);
     }
+
+    private Aresta proximoLista(int v) {
+        this.posicaoAtual[v]++;
+        while((this.posicaoAtual[v]< this.vertice) && (this.matriz[v][this.posicaoAtual[v]] == 0)) this.posicaoAtual[v]++;
+        if(this.posicaoAtual[v] == this.vertice) return null;
+        else return new Aresta (v, this.posicaoAtual[v], this.matriz[v][this.posicaoAtual[v]]);
+    }
+    
     
 }
