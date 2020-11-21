@@ -13,7 +13,7 @@ public class Grafo {
     
     private int matriz[][];
     private int vertice;
-    private ins posicaoAtual[];
+    private int posicaoAtual[];
     
     public Grafo (int vertice){
         this.matriz = new int[vertice][vertice];
