@@ -50,5 +50,18 @@ public class Grafo {
         else return new Aresta (v, this.posicaoAtual[v], this.matriz[v][this.posicaoAtual[v]]);
     }
     
+    public Aresta retirarAresta(int v1, int v2){
+        //Primeiro virifico se a Aresta existe, caso não return null atualizo o custo da aresta na matriz para 0 e return a aresta (custo) que nesse caso é 0;
+        if(this.matriz[v1][v2] == 0) return null;
+        else{
+            Aresta aresta = new Aresta(v1, v2, this.matriz[v1][v2]);
+            this.matriz[v1][v2] = 0;
+            return aresta;
+        }
+    }
     
+    public void imprimir(){}
+    
+    public int quantVertices(){ return this.vertice; }
+          
 }
