@@ -32,5 +32,11 @@ public class Grafo {
     public void inserirAresta(int v1, int v2, int custo){ 
         this.matriz[v1][v2] = custo; 
     }
-        
+    public boolean listaVaiza(int v){ 
+        for(int i = 0;i <this.vertice; i++) if(this.matriz[v][i] > 0) return false;
+        return true;
+    }
+    public boolean existeLigacao(int v1, int v2){ return this.matriz[v1][v1] > 0; }
+    
+    
 }
