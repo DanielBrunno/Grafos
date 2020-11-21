@@ -26,4 +26,11 @@ public class Grafo {
         }
     }
     
+    //aqui começa o CRUD. :) 
+    
+    //INSERIR ARESTA
+    public void inserirAresta(int v1, int v2, int custo){ 
+        this.matriz[v1][v2] = custo; 
+    }
+        
 }
