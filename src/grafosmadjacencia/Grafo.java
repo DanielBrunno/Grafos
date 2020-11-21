@@ -60,7 +60,18 @@ public class Grafo {
         }
     }
     
-    public void imprimir(){}
+    public void imprimir(){
+        System.out.print("  ");
+        for(int i = 0; i < this.quantVertices(); i++)
+            System.out.print(i + "  ");
+        System.out.println();
+        for(int j = 0; j < this.quantVertices(); j++){
+            System.out.print(j + "  ");
+            for(int l = 0; l < this.quantVertices(); l++)
+                System.out.print(this.matriz[j][l] + "  ");
+        System.out.println();
+        }
+    }
     
     public int quantVertices(){ return this.vertice; }
           
